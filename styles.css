@@ -551,6 +551,38 @@ img {
     display: grid;
   }
 
+  .clubs {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 52px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .team-block {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .team-block .team-logo,
+  .team-block .team-crest {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .team-block > div {
+    min-width: 0;
+  }
+
+  .team-block p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .score-box {
+    width: 52px;
+    height: 60px;
+  }
+
   .gallery-strip {
     grid-auto-columns: minmax(220px, 80%);
   }
@@ -577,5 +609,13 @@ img {
 
   .stats {
     gap: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .team-block {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
   }
 }
