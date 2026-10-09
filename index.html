@@ -371,6 +371,29 @@
         </div>
       </div>
     </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="m3.5 10 8.5-7 8.5 7M5.5 8.5V21h13V8.5M9.5 21v-7h5v7" />
+      </svg>
+    </button>
+
+    <script>
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      function updateBackToTopVisibility() {
+        backToTopButton.hidden = window.scrollY <= 200;
+      }
+
+      window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+      window.addEventListener("pageshow", updateBackToTopVisibility);
+
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      updateBackToTopVisibility();
+    </script>
   </body>
 </html>
 <!-- Test update -->
