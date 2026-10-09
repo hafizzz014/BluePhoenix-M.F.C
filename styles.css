@@ -305,6 +305,12 @@ img {
   margin-top: 4px;
 }
 
+.match-venue {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
 .section {
   padding: 90px 0;
 }
@@ -459,7 +465,25 @@ img {
   font-size: 1.25rem;
 }
 
-.fixture-item span {
+.fixture-venue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.fixture-venue img {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.fixture-item > span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -472,7 +496,7 @@ img {
   font-weight: 700;
 }
 
-.result-item span {
+.result-item > span {
   background: rgba(46, 230, 166, 0.12);
   border-color: rgba(46, 230, 166, 0.22);
   color: var(--primary);
