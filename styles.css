@@ -397,6 +397,13 @@ img {
   margin-bottom: 6px;
 }
 
+.stats .stats-label {
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
 .stats span {
   color: var(--muted);
   font-size: 0.9rem;
