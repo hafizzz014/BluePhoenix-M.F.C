@@ -14,22 +14,21 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=7" />
   </head>
-  <body>
+  <body class="home-page">
     <header class="topbar">
       <div class="container nav">
-        <div class="brand">
+        <a class="brand" href="index.html" aria-label="Blue Phoenix M.F.C home">
           <img src="16346.jpg" alt="Blue Phoenix M.F.C logo" class="club-logo" />
           <div>
             <p class="club-name">Blue Phoenix M.F.C</p>
             <small>Mini Football Club</small>
           </div>
-        </div>
+        </a>
 
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#about">About</a>
-          <a href="#players">Squad</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -48,7 +47,7 @@
               loyalty, passion, unity and ambition.
             </p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="#players">Meet the Team</a>
+              <a class="btn btn-primary" href="squad.html">Meet the Team</a>
               <a class="btn btn-secondary" href="#about">Our Story</a>
             </div>
 
@@ -58,23 +57,21 @@
                 <span>Founded</span>
               </li>
               <li>
-                <strong>13</strong>
-                <span>Players</span>
-              </li>
-              <li>
                 <strong>1 Final</strong>
                 <span>1 Semi, 3 QFs</span>
               </li>
             </ul>
           </div>
 
-          <div class="hero-card" aria-label="Featured match card" data-stadium="Amasiya I.S.K.">
-            <figure class="hero-photo">
+          <div id="fixtures" class="hero-card" aria-label="Featured match card" data-stadium="Amasiya I.S.K.">
+            <figure class="hero-photo" data-slideshow>
               <img
+                class="hero-slide is-active"
                 src="IMG_9721-hero.jpg"
                 alt="Blue Phoenix players standing together in club kit"
                 fetchpriority="high"
               />
+              <img class="hero-slide" alt="" aria-hidden="true" />
               <figcaption>Blue Phoenix M.F.C. · Matchday</figcaption>
             </figure>
             <div class="hero-card-content">
@@ -128,108 +125,150 @@
             <h2>Excellence cultivated from the first whistle.</h2>
           </div>
           <p>
-            Founded in 2025 by Hafiz Bayramov and Karim Orujov, Blue Phoenix was created
-            with a simple idea: to build a club where football means more than just the
-            result. We are building unity, a family, and a place where every player can be
-            themselves without hesitation. Our goal is to win, but more important than that,
-            we are building a legacy — a story of our own, written together through every
-            game, every challenge and every moment.
+            Blue Phoenix was founded in 2025 by Hafiz Bayramov and Karim Orujov. "We wanted
+            to build a club where football is about more than just winning games. From the
+            beginning, we wanted our players to feel like they belonged to something and
+            to enjoy being part of the team. Of course, we want to win, but we also want to
+            build strong friendships and create something we can be proud of."
           </p>
           <p>
-            Led by Head Coach &amp; Manager Hafiz Bayramov, Blue Phoenix continues to grow with
-            the same values we were founded on: loyalty, passion, unity and ambition. We are
-            not just teammates. We are a family. This is our club. Our identity. Our story.
-            And our story has only just begun.
+            Today, under the leadership of Head Coach and Manager Hafiz Bayramov, we continue
+            to work towards those goals. We have had good moments and difficult ones, but our
+            aim has always been the same. We want to improve, stay together as a team and keep
+            moving forward. Blue Phoenix means a lot to us, and we hope the best chapters of
+            our story are still ahead.
           </p>
         </div>
-      </section>
 
-      <section id="players" class="section squad">
-        <div class="container">
+        <div class="container club-history">
           <div class="section-heading">
-            <p class="section-tag">Squad</p>
-            <h2>Meet the players</h2>
+            <h2>Club History</h2>
           </div>
 
-          <div class="player-grid">
-            <article class="player-card">
-              <div class="avatar one">KE</div>
-              <h3>Kamil Eyyubov</h3>
-              <p>Goalkeeper</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar two">FE</div>
-              <h3>Feray Eyvazov</h3>
-              <p>Goalkeeper</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar three">HM</div>
-              <h3>Hasanaga Majidov</h3>
-              <p>Goalkeeper</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar four">IM</div>
-              <h3>Ibrahim Mehdiyev</h3>
-              <p>Club legend • Centre-back</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar one">KK</div>
-              <h3>Kanan Karimov</h3>
-              <p>Centre-back</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar two">VH</div>
-              <h3>Vasif Haziyev</h3>
-              <p>Centre-back</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar three">HA</div>
-              <h3>Huseyn Alizada</h3>
-              <p>Centre-back</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar four">EH</div>
-              <h3>Erol Hamidzada</h3>
-              <p>Central midfielder</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar one">TM</div>
-              <h3>Telman Mammadov</h3>
-              <p>Central midfielder</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar two">ST</div>
-              <h3>Sirus Tabrizli</h3>
-              <p>Central midfielder</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar three">TR</div>
-              <h3>Timur Ramazanov</h3>
-              <p>Attacker</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar four">ZA</div>
-              <h3>Zeyd Aliyev</h3>
-              <p>Attacker</p>
-            </article>
-            <article class="player-card">
-              <div class="avatar one">MB</div>
-              <h3>Mathis Bootz</h3>
-              <p>Attacker</p>
-            </article>
-          </div>
+          <section class="history-block" aria-labelledby="tournament-history-heading">
+            <div class="history-heading">
+              <p class="history-kicker">Competitive record</p>
+              <h3 id="tournament-history-heading">Tournament timeline</h3>
+            </div>
 
-          <div class="team-summary">
-            <p>Total: 13 players</p>
-            <p>3 GK • 4 CB • 3 CM • 3 ATT</p>
-          </div>
+            <ol class="history-timeline">
+              <li class="history-entry">
+                <time datetime="2025-03-15">15 March 2025</time>
+                <div class="history-entry-content">
+                  <div class="history-labels">
+                    <span class="history-competition">SummerCup</span>
+                    <span class="history-stage">Quarter-final</span>
+                  </div>
+                  <h4>Lost to Aldenaire F.C.</h4>
+                  <p class="history-detail">Final score: <strong>4–11</strong></p>
+                </div>
+              </li>
+              <li class="history-entry">
+                <time datetime="2025-07-21">21 July 2025</time>
+                <div class="history-entry-content">
+                  <div class="history-labels">
+                    <span class="history-competition">SummerCup</span>
+                    <span class="history-stage">Semi-final</span>
+                  </div>
+                  <h4>Eliminated by Sabah M.F.K.</h4>
+                  <p class="history-detail">Aggregate score: <strong>12–16</strong></p>
+                </div>
+              </li>
+              <li class="history-entry">
+                <time datetime="2026-03-23">23 March 2026</time>
+                <div class="history-entry-content">
+                  <div class="history-labels">
+                    <span class="history-competition">SummerCup</span>
+                    <span class="history-stage">Final appearance</span>
+                  </div>
+                  <h4>Lost to IndualOpt F.C. in the final; Blue Phoenix finished as runners-up.</h4>
+                  <p class="history-detail">Final score: <strong>2–3</strong></p>
+                </div>
+              </li>
+              <li class="history-entry">
+                <time datetime="2026-05-25">25 May 2026</time>
+                <div class="history-entry-content">
+                  <div class="history-labels">
+                    <span class="history-competition">GoldCup</span>
+                    <span class="history-stage">Quarter-final</span>
+                  </div>
+                  <h4>Lost to EAS Saints F.C.</h4>
+                  <p class="history-detail">Final score: <strong>1–4</strong></p>
+                </div>
+              </li>
+              <li class="history-entry">
+                <time datetime="2026-07-05">5 July 2026</time>
+                <div class="history-entry-content">
+                  <div class="history-labels">
+                    <span class="history-competition">SuperCup</span>
+                  </div>
+                  <h4>Eliminated by Aran Baku F.C. on penalties.</h4>
+                  <p class="history-detail">
+                    Match score: <strong>7–7</strong>
+                    <span aria-hidden="true">·</span>
+                    Penalty shootout: <strong>3–4</strong>
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="history-block" aria-labelledby="friendly-wins-heading">
+            <div class="history-heading">
+              <p class="history-kicker">Outside tournament play</p>
+              <h3 id="friendly-wins-heading">Memorable Friendly Wins</h3>
+            </div>
+
+            <div class="friendly-results">
+              <article class="friendly-result">
+                <time datetime="2025-05-11">11 May 2025</time>
+                <span class="friendly-label">Friendly</span>
+                <p class="friendly-score">
+                  <span>Blue Phoenix M.F.C.</span>
+                  <strong>20–1</strong>
+                  <span>Hyper Baku F.C.</span>
+                </p>
+              </article>
+              <article class="friendly-result">
+                <time datetime="2025-07-05">5 July 2025</time>
+                <span class="friendly-label">Friendly</span>
+                <p class="friendly-score">
+                  <span>Blue Phoenix M.F.C.</span>
+                  <strong class="standout-score">41–4</strong>
+                  <span>6th Flames</span>
+                </p>
+                <p class="friendly-note">One of the club’s most outstanding scorelines.</p>
+              </article>
+              <article class="friendly-result">
+                <time datetime="2025-08-29">29 August 2025</time>
+                <span class="friendly-label">Friendly</span>
+                <p class="friendly-score">
+                  <span>Blue Phoenix M.F.C.</span>
+                  <strong>21–0</strong>
+                  <span>132-134 M.F.C.</span>
+                </p>
+                <p class="friendly-note">
+                  132–134 M.F.C. had finished third twice in the Goal+ tournament,
+                  one of the most prominent amateur mini-football tournaments.
+                </p>
+              </article>
+              <article class="friendly-result">
+                <time datetime="2026-03-01">1 March 2026</time>
+                <span class="friendly-label">Friendly</span>
+                <p class="friendly-score">
+                  <span>Blue Phoenix M.F.C.</span>
+                  <strong>22–4</strong>
+                  <span>Baku Stars F.C.</span>
+                </p>
+              </article>
+            </div>
+          </section>
         </div>
       </section>
 
       <section class="section records">
         <div class="container">
           <div class="section-heading">
-            <p class="section-tag">Club legends</p>
             <h2>Records &amp; icons</h2>
           </div>
 
@@ -240,7 +279,7 @@
                 <h3>Elkhan Rahimov</h3>
                 <p>First player to reach 100 goals in 22 games. Overall: 147 goals in 32 games.</p>
               </div>
-              <span>Legend</span>
+              <span class="achievement-label">Legend</span>
             </div>
             <div class="fixture-item result-item">
               <div>
@@ -248,7 +287,7 @@
                 <h3>Ibrahim Mehdiyev</h3>
                 <p>The man who was and is here since day one — a true Blue Phoenix legend.</p>
               </div>
-              <span>Legend</span>
+              <span class="achievement-label">Legend</span>
             </div>
           </div>
         </div>
@@ -257,7 +296,6 @@
       <section id="team-photos" class="section gallery">
         <div class="container">
           <div class="section-heading">
-            <p class="section-tag">Moments</p>
             <h2>Team Photos</h2>
           </div>
 
@@ -330,33 +368,9 @@
         </div>
       </section>
 
-      <section id="fixtures" class="section fixtures">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-tag">Fixtures</p>
-            <h2>Upcoming matches</h2>
-          </div>
-
-          <div class="fixture-list">
-            <div class="fixture-item" data-stadium="Amasiya I.S.K.">
-              <div>
-                <small>Sun, 15:00</small>
-                <h3>Blue Phoenix M.F.C vs Baku Juniors B</h3>
-                <div class="fixture-venue">
-                  <img src="stadium-icon.svg" alt="" aria-hidden="true" />
-                  <span>Amasiya I.S.K.</span>
-                </div>
-              </div>
-              <span>Semi-final</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section results">
         <div class="container">
           <div class="section-heading">
-            <p class="section-tag">Previous matches</p>
             <h2>Recent results</h2>
           </div>
 
@@ -398,15 +412,6 @@
         </div>
       </section>
 
-      <section class="section cta-banner">
-        <div class="container banner-box">
-          <div>
-            <p class="section-tag light">Join us</p>
-            <h2>Support the club. Grow the legacy.</h2>
-          </div>
-          <a class="btn btn-primary" href="#contact">Get in Touch</a>
-        </div>
-      </section>
     </main>
 
     <footer id="contact" class="site-footer">
@@ -428,21 +433,6 @@
       </svg>
     </button>
 
-    <script>
-      const backToTopButton = document.querySelector(".back-to-top");
-
-      function updateBackToTopVisibility() {
-        backToTopButton.hidden = window.scrollY <= 200;
-      }
-
-      window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
-      window.addEventListener("pageshow", updateBackToTopVisibility);
-
-      backToTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      updateBackToTopVisibility();
-    </script>
+    <script src="site.js?v=2" defer></script>
   </body>
 </html>
