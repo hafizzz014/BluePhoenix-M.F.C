@@ -84,32 +84,46 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(7, 24, 39, 0.97);
-  border-bottom: 1px solid var(--line);
+  background: rgba(7, 24, 39, 0.98);
+  border-bottom: 1px solid rgba(84, 184, 231, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
 
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "brand action"
+    "links links";
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  min-height: 78px;
+  column-gap: 32px;
+  padding-top: 13px;
 }
 
 .brand {
+  grid-area: brand;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  min-width: 0;
+  padding: 1px 0 4px;
   color: inherit;
 }
 
-.brand > span {
+.brand > span,
+.brand > div {
   display: block;
   min-width: 0;
 }
 
 .brand .club-name {
   display: block;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .brand:focus-visible {
@@ -132,10 +146,10 @@ img {
 
 .club-logo,
 .team-logo {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .home-page .club-logo {
@@ -174,24 +188,43 @@ img {
 }
 
 .brand small {
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
+  display: block;
+  margin-top: 5px;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.105em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .nav-links {
+  grid-area: links;
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 30px;
+  min-height: 45px;
+  margin-top: 8px;
+  padding: 4px 0;
+  border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.9rem;
 }
 
 .nav-links a {
-  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  transition: color 0.18s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus-visible {
   color: var(--text);
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
 }
 
 .btn {
@@ -207,16 +240,33 @@ img {
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .btn-primary {
+  border-color: rgba(145, 210, 240, 0.24);
   background: #1688bd;
   color: #fff;
 }
 
 .btn-primary:hover {
+  border-color: rgba(145, 210, 240, 0.46);
   background: #1d9bd3;
+}
+
+.nav > .btn-primary {
+  grid-area: action;
+  min-height: 44px;
+  padding: 0.65rem 1.15rem;
+  border-radius: 5px;
+  font-size: 0.86rem;
+  letter-spacing: 0.015em;
+  white-space: nowrap;
 }
 
 .btn-secondary {
@@ -508,6 +558,10 @@ img {
   scroll-margin-top: 92px;
 }
 
+.history-block[id] {
+  scroll-margin-top: 92px;
+}
+
 .split {
   display: grid;
   grid-template-columns: minmax(190px, 0.8fr) repeat(2, minmax(0, 1fr));
@@ -548,6 +602,9 @@ img {
 }
 
 .team-section-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
   color: var(--muted);
   font-size: 0.84rem;
   font-weight: 600;
@@ -1268,7 +1325,8 @@ img {
 
 @media (max-width: 900px) {
   .section[id],
-  #contact {
+  #contact,
+  .history-block[id] {
     scroll-margin-top: 132px;
   }
 
@@ -1292,15 +1350,7 @@ img {
   }
 
   .nav {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 12px 0;
-  }
-
-  .nav-links {
-    width: 100%;
-    justify-content: center;
-    order: 3;
+    column-gap: 22px;
   }
 
   .squad-groups {
@@ -1310,8 +1360,9 @@ img {
 
 @media (max-width: 640px) {
   .section[id],
-  #contact {
-    scroll-margin-top: 112px;
+  #contact,
+  .history-block[id] {
+    scroll-margin-top: 132px;
   }
 
   .site-footer {
@@ -1328,14 +1379,17 @@ img {
   .nav {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    column-gap: 8px;
-    row-gap: 10px;
-    padding: 10px 0;
+    grid-template-areas:
+      "brand action"
+      "links links";
+    column-gap: 10px;
+    padding: 10px 0 0;
   }
 
   .brand {
     min-width: 0;
     gap: 8px;
+    padding-bottom: 2px;
   }
 
   .club-logo {
@@ -1344,29 +1398,40 @@ img {
     height: 42px;
   }
 
-  .club-name {
-    font-size: 0.85rem;
-    letter-spacing: 0.01em;
+  .brand .club-name {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    letter-spacing: 0.035em;
   }
 
   .brand small {
-    font-size: 0.65rem;
+    margin-top: 4px;
+    font-size: clamp(0.56rem, 2.2vw, 0.65rem);
+    letter-spacing: 0.075em;
   }
 
   .nav > .btn-primary {
     min-height: 42px;
-    padding: 0.55rem 0.8rem;
-    font-size: 0.8rem;
+    padding: 0.55rem clamp(0.58rem, 2.4vw, 0.8rem);
+    font-size: clamp(0.72rem, 2.6vw, 0.8rem);
+  }
+
+  .brand .club-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-links {
+    width: 100%;
     white-space: nowrap;
   }
 
   .nav-links {
-    grid-column: 1 / -1;
+    grid-area: links;
     width: 100%;
-    justify-content: space-between;
-    gap: 12px;
-    padding-top: 8px;
-    border-top: 1px solid var(--line);
+    justify-content: flex-start;
+    gap: clamp(20px, 7vw, 30px);
+    min-height: 44px;
+    margin-top: 6px;
     font-size: 0.82rem;
   }
 
@@ -1434,6 +1499,10 @@ img {
     gap: 6px;
     margin-bottom: 22px;
     padding-bottom: 12px;
+  }
+
+  .squad-page-section .section-heading {
+    align-items: flex-start;
   }
 
   .section-heading h2,
@@ -1537,24 +1606,38 @@ img {
 }
 
 @media (max-width: 380px) {
-  .club-name {
-    font-size: 0.7rem;
-    letter-spacing: 0;
+  .nav {
+    column-gap: 7px;
+  }
+
+  .brand {
+    gap: 7px;
+  }
+
+  .brand .club-name {
+    font-size: 0.78rem;
+    letter-spacing: 0.025em;
   }
 
   .brand small {
-    font-size: 0.6rem;
+    font-size: 0.54rem;
+    letter-spacing: 0.045em;
   }
 
-  .club-name,
   .brand small {
-    white-space: nowrap;
+    font-size: 0.55rem;
+    letter-spacing: 0.065em;
   }
 
   .nav > .btn-primary {
-    padding-right: 0.55rem;
-    padding-left: 0.55rem;
-    font-size: 0.74rem;
+    min-height: 40px;
+    padding-right: 0.52rem;
+    padding-left: 0.52rem;
+    font-size: 0.72rem;
+  }
+
+  .nav-links {
+    gap: 22px;
   }
 }
 
@@ -1567,6 +1650,11 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .nav-links a,
+  .nav > .btn-primary {
+    transition: none;
+  }
+
   .home-page .club-logo,
   .hero-slide {
     animation: none;
