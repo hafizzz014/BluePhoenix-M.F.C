@@ -1,3 +1,27 @@
+const revealTargets = document.querySelectorAll("[data-reveal]");
+
+if (
+  revealTargets.length > 0 &&
+  "IntersectionObserver" in window &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  document.documentElement.classList.add("has-scroll-reveal");
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
+  );
+
+  revealTargets.forEach((target) => revealObserver.observe(target));
+}
+
 const backToTopButton = document.querySelector(".back-to-top");
 
 if (backToTopButton) {
