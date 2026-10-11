@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=16" />
+    <link rel="stylesheet" href="styles.css?v=17" />
   </head>
   <body class="home-page">
     <header class="topbar">
@@ -57,12 +57,12 @@
               </li>
               <li>
                 <strong class="stats-label">Tournament Record</strong>
-                <span>1 final · 1 semi-final · 3 quarter-finals</span>
+                <span>1 final · 2 semi-finals · 3 quarter-finals</span>
               </li>
             </ul>
           </div>
 
-          <div id="fixtures" class="hero-card" aria-label="Featured match card" data-stadium="Amasiya I.S.K.">
+          <div id="fixtures" class="hero-card" aria-label="Upcoming fixture information">
             <figure class="hero-photo" data-slideshow>
               <img
                 class="hero-slide is-active"
@@ -71,46 +71,13 @@
                 fetchpriority="high"
               />
               <img class="hero-slide" alt="" aria-hidden="true" />
-              <figcaption>Blue Phoenix M.F.C. · Matchday</figcaption>
+              <figcaption>Blue Phoenix M.F.C. · Club update</figcaption>
             </figure>
             <div class="hero-card-content">
-              <div class="match-badge">Next Match</div>
-              <div class="clubs">
-                <div class="team-block">
-                  <img src="16346.jpg" alt="Blue Phoenix logo" class="team-logo" />
-                  <div>
-                    <p>Blue Phoenix</p>
-                    <small>Home</small>
-                  </div>
-                </div>
-
-                <div class="score-box">
-                  <span>VS</span>
-                </div>
-
-                <div class="team-block">
-                  <span class="team-crest dark">B</span>
-                  <div>
-                    <p>Baku Juniors B</p>
-                    <small>Away</small>
-                  </div>
-                </div>
-              </div>
-
-              <div class="match-details">
-                <div>
-                  <small>11.10.2026</small>
-                  <strong>15:00</strong>
-                </div>
-                <div>
-                  <small>Match</small>
-                  <strong>SuperCup semi-final</strong>
-                </div>
-              </div>
-
-              <div class="fixture-venue match-venue">
-                <img src="stadium-icon.svg" alt="" aria-hidden="true" />
-                <span>Amasiya I.S.K.</span>
+              <div class="match-badge">Fixture update</div>
+              <div class="next-fixture-placeholder">
+                <h2>No Upcoming Match</h2>
+                <p>Our next fixture has not yet been confirmed. Stay tuned for updates.</p>
               </div>
             </div>
           </div>
@@ -147,32 +114,29 @@
           </div>
 
           <div class="fixture-list">
-            <div class="fixture-item result-item" data-stadium="Amasiya I.S.K.">
+            <div class="fixture-item result-item">
               <div>
-                <small>21 Sep, 15:00</small>
-                <h3>Blue Phoenix M.F.C 11:8 Aldenaire</h3>
-                <div class="fixture-venue">
-                  <img src="stadium-icon.svg" alt="" aria-hidden="true" />
-                  <span>Amasiya I.S.K.</span>
-                </div>
+                <small>11 October 2026, 15:00</small>
+                <h3>Blue Phoenix M.F.C. 3–3 Baku Juniors B</h3>
+                <p class="result-note">Lost 3–4 on penalties · SuperCup Semi-final</p>
               </div>
-              <span>Win</span>
+              <span>Lost on penalties</span>
             </div>
             <div class="fixture-item result-item" data-stadium="Amasiya I.S.K.">
               <div>
-                <small>27 Sep, 15:00</small>
-                <h3>Blue Phoenix M.F.C 26:6 23 Eagles</h3>
-                <div class="fixture-venue">
-                  <img src="stadium-icon.svg" alt="" aria-hidden="true" />
-                  <span>Amasiya I.S.K.</span>
-                </div>
-              </div>
-              <span>Win</span>
-            </div>
-            <div class="fixture-item result-item" data-stadium="Amasiya I.S.K.">
-              <div>
-                <small>4 Oct, 15:00</small>
+                <small>4 Oct 2026, 15:00</small>
                 <h3>Blue Phoenix M.F.C 8:1 Baku Slavic University</h3>
+                <div class="fixture-venue">
+                  <img src="stadium-icon.svg" alt="" aria-hidden="true" />
+                  <span>Amasiya I.S.K.</span>
+                </div>
+              </div>
+              <span>Win</span>
+            </div>
+            <div class="fixture-item result-item" data-stadium="Amasiya I.S.K.">
+              <div>
+                <small>27 Sep 2026, 15:00</small>
+                <h3>Blue Phoenix M.F.C 26:6 23 Eagles</h3>
                 <div class="fixture-venue">
                   <img src="stadium-icon.svg" alt="" aria-hidden="true" />
                   <span>Amasiya I.S.K.</span>
